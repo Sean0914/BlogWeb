@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gradient-to-b from-teal-400 to-blue-500 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Todo App</h1>
+        <div class="flex mb-4">
+            <input id="todo-input" type="text" placeholder="Add your new todo" class="flex-grow p-2 border rounded-l-lg focus:outline-none">
+            <button id="add-todo" class="bg-purple-500 text-white p-2 rounded-r-lg">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+        <ul id="todo-list">
+            <li class="flex items-center justify-between bg-gray-100 p-2 mb-2 rounded-lg">
+                Buy a new gaming laptop
+                <button class="text-red-500 delete-todo">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+            <li class="flex items-center justify-between bg-gray-100 p-2 mb-2 rounded-lg">
+                Complete a previous task
+                <button class="text-red-500 delete-todo">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+            <li class="flex items-center justify-between bg-gray-100 p-2 mb-2 rounded-lg">
+                Create video for YouTube
+                <button class="text-red-500 delete-todo">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+            <li class="flex items-center justify-between bg-gray-100 p-2 mb-2 rounded-lg">
+                Create a new portfolio site
+                <button class="text-red-500 delete-todo">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="flex items-center justify-between mt-4">
+            <span id="pending-tasks">You have 4 pending tasks</span>
+            <button id="clear-all" class="bg-purple-500 text-white px-4 py-2 rounded-lg">Clear All</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const todoInput = document.getElementById('todo-input');
+            const addTodoButton = document.getElementById('add-todo');
+            const todoList = document.getElementById('todo-list');
+            const pendingTasks = document.getElementById('pending-tasks');
+            const clearAllButton = document.getElementById('clear-all');
+
+            const updatePendingTasks = () => {
+                const taskCount = todoList.children.length;
+                pendingTasks.textContent = `You have ${taskCount} pending tasks`;
+            };
+
+            const addTodo = () => {
+                const todoText = todoInput.value.trim();
+                if (todoText !== '') {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center justify-between bg-gray-100 p-2 mb-2 rounded-lg';
+                    li.innerHTML = `
+                        ${todoText}
+                        <button class="text-red-500 delete-todo">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    `;
+                    todoList.appendChild(li);
+                    todoInput.value = '';
+                    updatePendingTasks();
+                }
+            };
+
+            const deleteTodo = (e) => {
+                if (e.target.closest('.delete-todo')) {
+                    e.target.closest('li').remove();
+                    updatePendingTasks();
+                }
+            };
+
+            const clearAllTodos = () => {
+                todoList.innerHTML = '';
+                updatePendingTasks();
+            };
+
+            addTodoButton.addEventListener('click', addTodo);
+            todoList.addEventListener('click', deleteTodo);
+            clearAllButton.addEventListener('click', clearAllTodos);
+            updatePendingTasks();
+        });
+    </script>
+</body>
+</html>

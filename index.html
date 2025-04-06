@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Kick Code</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/webkit.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbody">
+            <div class="container">
+                <div class="logo" id="home" data-aos="zoom-in" data-aos-delay="300">Code Kick</div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#" data-aos="fade-up" data-aos-delay="300">Home</a></li>
+                        <li><a href="#blog" data-aos="fade-up" data-aos-delay="400">Catigory</a></li>
+                        <li><a href="#category" data-aos="fade-up" data-aos-delay="500">Blog</a></li>
+                        <li><a href="#cont" data-aos="fade-up" data-aos-delay="600">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="media">
+                    <a href="#" data-aos="zoom-in" data-aos-delay="700"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" data-aos="zoom-in" data-aos-delay="800"><i class="fab fa-instagram"></i></a>
+                    <a href="#" data-aos="zoom-in" data-aos-delay="900"><i class="fab fa-github"></i></a>
+                    <a href="#" data-aos="zoom-in" data-aos-delay="1000"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!----------------------- First Page Title and Moto ---------------------->
+    <main>
+        <section class="page">
+            <div class="pageback">
+                <h3 data-aos="fade-up" data-aos-duration="1000">Beginner Coding Projects</h3>
+                <h1 data-aos="fade-up" data-aos-duration="1500"> Kick Your Programming Journey</h1>
+                <button class="btn" data-aos="fade-up" data-aos-duration="2000">Explore</button>
+                <div class="dicription" data-aos="fade-up" data-aos-duration="3000">
+                    <h1 class="me">Explore <span class="animate" data-text="The World of IT">The World of IT</span></h1>
+                </div>
+            <!-- <div class="thrd">
+                <iframe src='https://my.spline.design/worldplanet-5a43a5d983d790e8af7daaeac8b8cb7e/' frameborder='0' width='100%' height='100%' data-aos="fade-up" data-aos-duration="3000"></iframe>
+            </div> -->
+        </section>
+        <!--------------------- Image swaper --------------------->
+        <section id="blog">
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/calcu.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Build a Simple Calculator Using JavaScript</h3>
+                                <button class="btn btn-blog" onclick="nextPage()">Beginner Project</button>
+                                <span>3 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="300">
+                            <img src="./images/todo.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Create a To-Do List with HTML, CSS & JavaScript</h3>
+                                <button class="btn btn-blog" onclick="nexttPage()">Web Development</button>
+                                <span>4 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./images/react.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Create Your Own Website Using React Js</h3>
+                                <button class="btn btn-blog">Frontend Development</button>
+                                <span>5 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/future-artificial-intelligence.avif" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Design Your First Portfolio Website Using The Basic HTML and CSS</h3>
+                                <button class="btn btn-blog">Frontend Project</button>
+                                <span>6 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-------------------------------- Main Content Container ------------------------------------->
+            <div class="main-content">
+                <div class="main-image" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./images/future-artificial-intelligence.avif" alt="blog1">
+                    <div class="disc">
+                        <h2>Blog Title Here?</h2>
+                        <p>Here put some of the blog content just a brief one so when user click it it will go to the
+                            next html file.</p>
+                        <div class="butn"><button>Ream More...</button></div>
+                    </div>
+
+                    <img src="./images/Screenshot 2025-02-23 221336.png" alt="blog1" data-aos="zoom-in"
+                        data-aos-delay="200" onclick="goToPage()">
+                    <div class="disc">
+                        <h2>Blog Title Here?</h2>
+                        <p>Here put some of the blog content just a brief one so when user click it it will go to the
+                            next html file.</p>
+                        <div class="butn"><button>Ream More...</button></div>
+                    </div>
+                </div>
+                <!------------------------------ Sidebar -------------------------->
+                <aside class="sidebar">
+                    <div class="category">
+                        <h2>Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="#">Software</a>
+                                <span>(05)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="#">Technology</a>
+                                <span>(02)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="#">Lifestyle</a>
+                                <span>(07)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="#">Shopping</a>
+                                <span>(01)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="#">Food</a>
+                                <span>(08)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popular-post">
+                        <h2>Popular Post</h2>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            <div class="post-image" id="postImage">
+                                <div>
+                                    <img src="./images/b.jpg" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2023</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div id="category" class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <div>
+                                    <img src="./images/calcu.jpg" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2023</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="./images/future-artificial-intelligence.avif" class="img" alt="blog1">
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                        2023</span>
+                                    <span>2 Comments</span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">New data recording system to better analyse road accidents</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Newsletter</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email">
+                            <button class="btn form-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <div class="tags flex-row">
+                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="200">Technology</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="300">Travel</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="400">Illustration</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="500">Design</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="600">Lifestyle</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="700">Love</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="800">Project</span>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+        </div>
+    </main>
+    <!------------------------------------ Footer -------------------------------------->
+    <footer class="site-footer" id="cont">
+        <div class="footer-container">
+            <div class="footer-section about" data-aos="fade-right" data-aos-delay="200">
+                <h2>What it is</h2>
+                <p>It is a blog dedicated to the IT industry, providing insights, trends, and knowledge to help tech
+                    enthusiasts and professionals stay informed. Our goal is to make complex IT topics easy to
+                    understand and engaging for everyone.</p>
+            </div>
+            <div class="footer-section updates-section" data-aos="fade-right" data-aos-delay="200">
+                <h2>Stay Connected</h2>
+                <p>Subscribe for the latest news and exclusive updates.</p>
+                <div class="subscribe-container">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <div class="footer-section updates" data-aos="fade-left" data-aos-delay="200">
+                <h2>Recent Posts</h2>
+                <p>Catch up with our newest blog entries, announcements, and more.</p>
+            </div>
+            <div class="footer-section social" data-aos="fade-left" data-aos-delay="200">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="port"><button onclick="goToPage()">Portfolio</button></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 All Rights Reserved | Crafted by
+                <a href="https://www.facebook.com/sean.lapaz.777" target="_blank">Sean Andrei Lapaz <i
+                        class="fab fa-facebook"></i></a>
+            </p>
+        </div>
+        <div class="back-to-top">
+            <a href="#home">
+                <span><i class="fas fa-arrow-up fa-2x"></i></span>
+            </a>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/Js/script.js"></script>
+</body>
+
+</html>

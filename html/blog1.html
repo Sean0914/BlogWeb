@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Tutorial</title>
+    <link rel="stylesheet" href="/styles/blog1.css">
+</head>
+<body>
+
+    <header>
+        <h1>Build a Simple Calculator</h1>
+        <p>Step-by-step guide to creating your own calculator using HTML, CSS, and JavaScript.</p>
+    </header>
+
+    <section class="content">
+        <h2>🔹 Step 1: Create the HTML Structure</h2>
+        <p>We start by creating a basic layout for our calculator using HTML.</p>
+        <pre>
+            <code>
+&lt;div class="calculator"&gt;
+    &lt;input type="text" id="display" readonly&gt;
+    &lt;div class="buttons"&gt;
+        &lt;button onclick="clearDisplay()"&gt;C&lt;/button&gt;
+        &lt;button onclick="appendValue('1')"&gt;1&lt;/button&gt;
+        ...
+        &lt;button onclick="calculateResult()"&gt;=&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <h2>🔹 Step 2: Style with CSS</h2>
+        <p>We make our calculator look modern using CSS.</p>
+
+        <h2>🔹 Step 3: Add JavaScript Functionality</h2>
+        <p>We write JavaScript to handle button clicks and calculations.</p>
+
+        <button class="preview-btn" onclick="window.location.href='calcu.html'">Live Preview</button>
+    </section>
+
+</body>
+</html>

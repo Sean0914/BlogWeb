@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .calculator {
+            width: 300px;
+            height: 500px;
+            background-color: #000;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .display {
+            height: 60px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: right;
+            padding: 10px;
+            font-size: 24px;
+            color: #000;
+        }
+        .button {
+            width: 60px;
+            height: 60px;
+            background-color: #d3d3d3;
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+        }
+        .button-clear {
+            background-color: #f44336;
+            color: #fff;
+        }
+        .button-equal {
+            background-color: #ff5722;
+            color: #fff;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-blue-200 flex items-center justify-center min-h-screen">
+    <div class="calculator">
+        <div id="display" class="display"></div>
+        <div class="grid grid-cols-4 gap-2">
+            <div class="button" onclick="appendNumber('7')">7</div>
+            <div class="button" onclick="appendNumber('8')">8</div>
+            <div class="button" onclick="appendNumber('9')">9</div>
+            <div class="button" onclick="appendOperator('/')">/</div>
+            <div class="button" onclick="appendNumber('4')">4</div>
+            <div class="button" onclick="appendNumber('5')">5</div>
+            <div class="button" onclick="appendNumber('6')">6</div>
+            <div class="button" onclick="appendOperator('*')">*</div>
+            <div class="button" onclick="appendNumber('1')">1</div>
+            <div class="button" onclick="appendNumber('2')">2</div>
+            <div class="button" onclick="appendNumber('3')">3</div>
+            <div class="button" onclick="appendOperator('-')">-</div>
+            <div class="button" onclick="appendNumber('0')">0</div>
+            <div class="button" onclick="appendOperator('+')">+</div>
+            <div class="button button-clear" onclick="clearDisplay()">C</div>
+            <div class="col-span-4">
+                <div class="button button-equal" onclick="calculateResult()">=</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '';
+        let operator = '';
+        let firstOperand = '';
+
+        function appendNumber(number) {
+            currentInput += number;
+            display.innerText = currentInput;
+        }
+
+        function appendOperator(op) {
+            if (currentInput === '') return;
+            firstOperand = currentInput;
+            operator = op;
+            currentInput = '';
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            operator = '';
+            firstOperand = '';
+            display.innerText = '';
+        }
+
+        function calculateResult() {
+            if (currentInput === '' || firstOperand === '' || operator === '') return;
+            let result;
+            switch (operator) {
+                case '+':
+                    result = parseFloat(firstOperand) + parseFloat(currentInput);
+                    break;
+                case '-':
+                    result = parseFloat(firstOperand) - parseFloat(currentInput);
+                    break;
+                case '*':
+                    result = parseFloat(firstOperand) * parseFloat(currentInput);
+                    break;
+                case '/':
+                    result = parseFloat(firstOperand) / parseFloat(currentInput);
+                    break;
+                default:
+                    return;
+            }
+            display.innerText = result;
+            currentInput = result;
+            operator = '';
+            firstOperand = '';
+        }
+    </script>
+</body>
+</html>

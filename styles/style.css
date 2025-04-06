@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Luckiest+Guy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+h1 {
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+}
+.navbody {
+    background:  rgb(42, 82, 245);
+    padding: 5px 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+   padding: 0px 10px;
+}
+
+.logo {
+    color: white;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.navbar {
+    margin: 0;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    list-style: none;
+    gap: 15px;
+}
+.navbar ul li {
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 5px 8px;
+}
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: white;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+.me {
+    -webkit-text-fill-color: white;
+    font-size: 24px;
+    gap: 2px;
+}
+
+.media {
+    margin: 5px;
+    text-decoration: none;
+    display: flex; 
+    gap: 10px;
+}
+
+.media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px; 
+    text-decoration: none;
+    color: white; 
+    transition: color 0.5s ease;
+
+}
+
+.media a:hover {
+    color: inherit; 
+}
+
+main .page {
+    background: linear-gradient(rgba(39, 18, 64, 0.6), rgba(22, 57, 83, 0.3)), url('../images/b.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+main .page .pageback {
+    padding: 10rem;
+    text-align: center;
+    color: white;
+}
+main .page h1,h3 {
+    margin: .3rem;
+}
+main .page .btn{
+    margin: 1.8rem;
+    background-color: rgb(42, 82,245);
+    color: white;
+}
+main .page .btn:hover{
+    box-shadow: 0 0 15px 5px rgb(78, 111, 241), 0 0 25px 10px rgb(5, 18, 70);
+    color: white;
+    border: 1px solid white;
+    transition: 0.2s ease-in-out;
+}
+.carousel-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.blog-content {
+    flex: 0 0 calc(33.33% - 20px);
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.blog-content img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+.blog-content img:hover{
+    transform: scale(1.03);
+}
+.blog-title { 
+    margin-top: 10px; 
+    font-family: Arial, sans-serif; 
+}
+.btn-blog { 
+    background: #ff7b00; 
+    color: white; border: 
+    none; padding: 5px 10px; 
+    cursor: pointer; 
+}
+.controls {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.arrow {
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.blog-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.blog-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.blog-title h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.blog-title button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.blog-title button:hover{
+    background-color: transparent;
+    border: 1px solid rgb(77, 65, 65);
+    color: black;
+    transition: 0.3s ease;
+}
+
+.blog-title span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: gray;
+}
+
+.owl-navigation {
+    position: absolute;
+    top: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.owl-nav-prev,
+.owl-nav-next {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+.owl-nav-prev:hover,
+.owl-nav-next:hover {
+    color: #007bff;
+}
+
+
+.owl-carousel .owl-stage-outer {
+    padding: 20px 0;
+}
+
+
+.main-content {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1450px;
+}
+.main-image img {
+    width: 800px;
+    padding-left: 20px;
+    cursor:help;
+    border-radius: 10px;
+    transition: transform 0.6s ease-in-out;
+} 
+.main-image img:hover{
+    transform: scale(1.05);
+}
+.disc {
+    color: black;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 20px 40px;
+}
+.disc h2 {
+    padding-bottom: 20px;
+    font-size: 28px;
+}
+.disc p {
+    color: #333;
+    font-family: "Josefin Sans", sans-serif;
+    padding-bottom: 20px;
+}
+.butn button{
+    border: none;
+    background-color: #007bff;
+    color: white;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.butn button:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(95, 86, 86);
+    transition: .3s ease;
+}
+.blog-info {
+    padding-right: 20px;
+}
+.catigory {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 200;
+    font-family: "Josefin Sans", sans-serif;
+}
+.blog-info ul {
+    margin: 20px;
+}
+.blog-info ul li{
+    list-style: none;
+    padding-inline: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.category-list .list-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    background: linear-gradient(to top, rgb(211, 59, 228), rgb(42, 82, 245)); 
+    color: white;
+    margin-bottom: 10px; 
+    border: none; 
+}
+.category-list .list-items:hover {
+    transform: scale(1.25); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+.category-list .list-items a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.category-list .list-items span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.popular-post {
+    margin-top: 30px;
+}
+
+.popular-post .post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; 
+    width: 100%;
+}
+
+.popular-post .post-image {
+    width: 100%;
+    max-height: 200px; 
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.popular-post .post-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.popular-post .post-image img:hover{
+    transform: scale(1.06);
+}
+.popular-post .post-date {
+    background: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.popular-post .post-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 8px;
+}
+
+.popular-post .post-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.popular-post .post-title a:hover {
+    color: #007bff;
+}
+
+
+.newsletter {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter .form-element {
+    margin-top: 10px;
+}
+
+.newsletter .input-element {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newsletter .form-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgb(211, 59, 228), rgb(42, 82, 245)); 
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.form-btn:hover{
+    background: linear-gradient(to top,rgb(42,82,245), rgb(211, 59,228));
+    transition: 0.5s step-end;
+}
+
+.popular-tags {
+    margin-top: 30px;
+}
+
+.popular-tags .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popular-tags .tag {
+    background: linear-gradient(to top, rgb(211, 59, 228), rgb(42, 82, 245)); 
+    border-radius: 40px;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popular-tags .tag:hover {
+    background: transparent;
+    border: 1px solid rgb(83, 74, 74);
+    color: #000;
+}
+footer.site-footer {
+    height: 100%;
+    background: #1a1a1a;
+    position: relative;
+    color: #ffffff;
+}
+
+footer.site-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.site-footer .footer-container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 1rem;
+}
+
+footer.site-footer .footer-container h2 {
+    color: #f1f1f1;
+    font-size: 1.5rem;
+}
+
+footer.site-footer .newsletter .subscribe-box {
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+footer.site-footer .newsletter .subscribe-box input {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    flex: 1;
+}
+.footer-section.updates-section {
+    padding: 2rem 0;
+}
+
+.footer-section.updates-section h2 {
+    color: #ffffff;
+}
+
+.footer-section.updates-section p {
+    color: #ccc;
+}
+
+.subscribe-container {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ffffff; 
+}
+
+.subscribe-container input {
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.subscribe-container button {
+    background: #0c2ff9;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.subscribe-container button:hover {
+    background: transparent;
+    border: 1px solid white;
+    transition: .3s ease;
+}
+
+footer.site-footer .newsletter .subscribe-box button {
+    background: #0099ff;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+footer.site-footer .updates p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+footer.site-footer .social .social-icons i {
+    color: #ffffff;
+    padding: 0 0.4rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+footer.site-footer .social .social-icons i:hover {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+footer.site-footer .footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+footer.site-footer .footer-bottom p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer.site-footer .back-to-top {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.site-footer .back-to-top span {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer.site-footer .back-to-top span:hover {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}

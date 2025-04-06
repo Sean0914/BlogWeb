@@ -1,0 +1,103 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #393b47;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(2, 32, 56, 0.959);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(17, 130, 159, 0.911);
+    border-radius: 12px;
+}
+html, body {
+    overflow-x: hidden;
+}
+.thrd {
+    position: absolute; /* Moves it within a relative container */
+    right: 0; /* Sticks to the right */
+    top: 75%; /* Moves it to the vertical center */
+    transform: translateY(-50%); /* Adjusts to center properly */
+    height: 600px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.port button {
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    font-size: 12px;
+    background-color: #007bff;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.port button:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.dicription {
+    padding-top: 50px;  
+}
+
+.me{
+    font-family: "Luckiest Guy", cursive;
+    font-size: 32px;
+}
+.animate {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem; /* Adjust size as needed */
+    font-family: "Luckiest Guy", cursive;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(49, 47, 47);
+}
+
+.animate::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%; 
+    font-size: inherit;
+    font-family: inherit;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    border-right: 3px solid rgb(9, 9, 9);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: revealText 6s steps(20, end) infinite, blinkCursor 0.7s infinite;
+}
+
+@keyframes revealText {
+    0%{
+        width: 0;
+    }
+    30% { 
+        width: 0; 
+    }
+    50% {
+         width: 100%; 
+        }  /* Typing effect */
+    80% {
+         width: 100%;
+         }  /* Pause before reset */
+    100% {
+         width: 0; 
+        }  /* Reset and restart */
+}
+@keyframes blinkCursor {
+    0%, 100% {
+         border-right-color: rgb(252, 252, 252); 
+        }
+    50% {
+         border-right-color: transparent;
+         }
+}
